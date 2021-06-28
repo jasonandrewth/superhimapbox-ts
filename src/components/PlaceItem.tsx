@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { IPlace } from "../schema/types";
 import mapbox, { Map, Marker, Popup } from "mapbox-gl";
