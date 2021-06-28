@@ -17,7 +17,7 @@ import "./App.css";
 function App() {
   const [map, setMap] = useState<null | Map>(null);
   const [mapStyle, setMapStyle] = useState<string>(
-    "mapbox://styles/mapbox/navigation-night-v1"
+    "mapbox://styles/mapbox/satellite-v9"
   );
   // eslint-disable-next-line
   const [latLong, setLatLong] = useState<ILatLong>({
