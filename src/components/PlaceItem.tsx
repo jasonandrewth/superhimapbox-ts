@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { IPlace } from "../schema/types";
 import mapbox, { Map, Marker, Popup } from "mapbox-gl";
@@ -6,10 +6,12 @@ import mapbox, { Map, Marker, Popup } from "mapbox-gl";
 //Style
 import styles from "./placespanel.module.css";
 
-const PlaceItem: React.FC<{ place: IPlace; map: Map | undefined | null }> = ({
-  place,
-  map,
-}) => {
+const PlaceItem: React.FC<{
+  place: IPlace;
+  map: Map | undefined | null;
+  deleteHandler: (idx: number) => void;
+  idx: number;
+}> = ({ place, map, deleteHandler, idx }) => {
   if (map) {
     const popup: Popup = new mapbox.Popup({
       closeButton: false,
@@ -36,7 +38,16 @@ const PlaceItem: React.FC<{ place: IPlace; map: Map | undefined | null }> = ({
 
   return (
     <div className={styles.placeitem} onClick={() => goTo()}>
-      {place.name} {place.latitude} {place.longitude}
+      {place.name}, {place.latitude}, {place.longitude}
+      <div
+        className={styles.closer}
+        onClick={(e) => {
+          e.preventDefault();
+          deleteHandler(idx);
+        }}
+      >
+        X
+      </div>
     </div>
   );
 };

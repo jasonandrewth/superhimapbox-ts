@@ -14,7 +14,7 @@ import styles from "./map.module.css";
 const MapMain: React.FC<{
   map: null | Map;
   style: string;
-  setMap: (arg0: Map) => void;
+  setMap: (arg0: Map) => void | null;
   latLong: ILatLong;
 }> = ({ map, style, setMap, latLong }) => {
   mapbox.accessToken = env.MAPBOX_ACCESS_TOKEN;
@@ -37,9 +37,8 @@ const MapMain: React.FC<{
   const mainmap = map;
 
   if (mainmap) {
-    map?.setStyle(style);
+    mainmap.setStyle(style);
   }
-
   return <div className={styles.map} id="map"></div>;
 };
 

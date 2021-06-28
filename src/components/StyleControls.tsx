@@ -27,6 +27,7 @@ const StyleControls: React.FC<{
         className={classNames.join(" ")}
         onClick={() => {
           setStyle(style.url);
+          console.log(mapStyle);
         }}
         key={idx}
       >

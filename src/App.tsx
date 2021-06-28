@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div>
-      <PlacesPanel places={places} map={map} />
+      <PlacesPanel places={places} map={map} setPlaces={setPlaces} />
       <SearchBox places={places} setPlaces={setPlaces} />
       <StyleControls mapStyle={mapStyle} setStyle={mapStyleHandler} />
       <MapMain map={map} setMap={setMap} latLong={latLong} style={mapStyle} />

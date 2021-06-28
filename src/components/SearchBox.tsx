@@ -56,6 +56,7 @@ const SearchForm: React.FC<{
   const onSubmit = (data: IFormData) => {
     // console.log(data);
     const placesCopy = [...places];
+
     placesCopy.push({
       name: data.address,
       latitude: data.latitude,
