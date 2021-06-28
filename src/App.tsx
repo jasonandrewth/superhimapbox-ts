@@ -19,6 +19,7 @@ function App() {
   const [mapStyle, setMapStyle] = useState<string>(
     "mapbox://styles/mapbox/navigation-night-v1"
   );
+  // eslint-disable-next-line
   const [latLong, setLatLong] = useState<ILatLong>({
     latitude: 40.7128,
     longitude: -74.006,

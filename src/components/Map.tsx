@@ -31,6 +31,7 @@ const MapMain: React.FC<{
     map?.addControl(navigationControl);
 
     setMap(mainmap);
+    // eslint-disable-next-line
   }, []);
 
   const mainmap = map;

@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect } from "react";
+import { ChangeEvent } from "react";
 
 import { useForm } from "react-hook-form";
 
@@ -35,8 +35,6 @@ interface IFormData {
   latitude: number;
   longitude: number;
 }
-
-interface IProps {}
 
 const libraries: Libraries = ["places"];
 
@@ -119,7 +117,7 @@ export function ReadySearchBox({
     ready,
     value,
     setValue,
-    suggestions: { status, data },
+    suggestions: { data },
     clearSuggestions,
   } = usePlacesAutocomplete({
     debounce: 300,
