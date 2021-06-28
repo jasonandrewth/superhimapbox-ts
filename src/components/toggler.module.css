@@ -1,0 +1,25 @@
+.styleswitch {
+  position: fixed;
+  bottom: 40px;
+  left: 20px;
+  background-color: #fff;
+  z-index: 1;
+
+  display: flex;
+}
+
+.option {
+  background-color: #fff;
+  appearance: none;
+  border: none;
+  font-family: inherit;
+  padding: 5px 10px;
+  margin: 0 1px 0 0;
+  color: #999;
+  outline: none;
+  cursor: pointer;
+}
+
+.option.active {
+  color: #000;
+}

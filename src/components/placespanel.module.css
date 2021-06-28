@@ -1,0 +1,22 @@
+.places {
+  position: fixed;
+  top: 120px;
+  left: 20px;
+  z-index: 1;
+}
+
+.placeitem,
+.noresult {
+  background-color: #fff;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.noresult {
+  color: #ccc;
+}
+
+.placeitem:hover {
+  background-color: #ffffcc;
+}
